@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "f812",
+      "nombre": "Marieza",
+      "apellido": "Torres",
+      "edad": "22",
+      "password": "1234"
+    },
+    {
+      "id": "0509",
+      "nombre": "Oliver",
+      "apellido": "Miranda",
+      "edad": "22",
+      "password": "1234"
+    }
+  ],
+  "tareas": [
+    {
+      "nombre": "Tarea 1",
+      "estado": "Pendiente",
+      "id": "832d"
+    },
+    {
+      "nombre": "Tarea 2",
+      "estado": "Pendiente",
+      "id": "4d9f"
+    },
+    {
+      "id": "157c",
+      "nombre": "Tarea 3",
+      "estado": "Pendiente"
+    }
+  ]
+}
