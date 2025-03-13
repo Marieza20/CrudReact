@@ -3,6 +3,7 @@ import React, {useState,useEffect} from 'react'
 import llamadosTareas from '../services/llamadosTareas'
 import Swal from 'sweetalert2'
 import 'boxicons'
+import '../styles/Card.css'
 
 function Card() {
   const [tareas, setTareas]=useState([])
@@ -75,20 +76,20 @@ function Card() {
 
   return (
     <div>
-      <h1>Tareas por hacer</h1>
-      <div>
-        <input onChange={tarea} value={tareaCrear} type="text" placeholder='Ingresar Tarea' />
-        <input onClick={agregar} type="button" value="Agregar" />
-      </div>
-      <div>
-        
-        <ul className='List'>
+      <div id="container">
+        <h1 id='titulo'>Tareas por hacer</h1>
+        <div id='postTarea'>
+          <input id='agregar' onChange={tarea} value={tareaCrear} type="text" placeholder='Ingresar Tarea' />
+          <input id='agregarbtn' onClick={agregar} type="button" value="Agregar" />
+        </div>
+
+        <ul id='ul'>
           {tareas.map((tarea,index) => (
-            <li key={index}>
-              <input onClick={e=>completar(tarea.id)} type="checkbox" />
+            <li id='list' key={index}>
+              <input id='check' onClick={e=>completar(tarea.id)} type="checkbox" />
               <p>{tarea.nombre}</p>
-              <box-icon onClick={e=>editar(tarea.id)} type='solid' name='pencil'></box-icon>
-              <box-icon onClick={e=>eliminar(tarea.id)} type='solid' name='trash-alt'></box-icon>
+              <box-icon id='icono' onClick={e=>editar(tarea.id)} type='solid' name='pencil'></box-icon>
+              <box-icon id='icono' onClick={e=>eliminar(tarea.id)} type='solid' name='trash-alt'></box-icon>
             </li>
           ))}
         </ul>
