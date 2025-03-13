@@ -27,10 +27,12 @@ function Card() {
     setTareas(datos)
   }
 
-  function completar(id){
-    const encontrado = tareas.map(tarea => tarea[nombre].id)
+  async function completar(id){
+    const encontrado = tareas.find(tarea => tarea.id===id)  
     let estado = "Completada"
-    llamadosTareas.update(encontrado,estado,id);
+    llamadosTareas.update(encontrado.nombre,estado,id);
+    const datos = await llamadosTareas.get()
+    setTareas(datos)
   }
 
   function editar(id){

@@ -18,12 +18,12 @@
   "tareas": [
     {
       "nombre": "Tarea 1",
-      "estado": "Pendiente",
+      "estado": "Completada",
       "id": "832d"
     },
     {
       "nombre": "Tarea 2",
-      "estado": "Pendiente",
+      "estado": "Completada",
       "id": "4d9f"
     },
     {
